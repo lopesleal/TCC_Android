@@ -30,6 +30,14 @@ public class TelaAcompanhamento extends AppCompatActivity {
                 startActivity(irTelaBoleto);
             }
         });
+        Button btnVoltarTelAcomp = (Button) findViewById(R.id.btnVoltarTelAcomp);
+        btnVoltarTelAcomp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent irTelaUsuarioTelAcomp = new Intent(TelaAcompanhamento.this, TelaUsuario.class);
+                startActivity(irTelaUsuarioTelAcomp);
+            }
+        });
 
 
     }

@@ -6,8 +6,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class TelaLogin extends AppCompatActivity {
+    EditText editTextLogin, editTextSenhaLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,6 +18,8 @@ public class TelaLogin extends AppCompatActivity {
         setContentView(R.layout.activity_tela_login);
 
         Button btnTelEsqueciSenha = (Button) findViewById(R.id.btnEsqSenha);
+        this.editTextLogin=(EditText) findViewById(R.id.txtLogin);
+        this.editTextSenhaLogin=(EditText) findViewById(R.id.txtSenhaLogin);
         btnTelEsqueciSenha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

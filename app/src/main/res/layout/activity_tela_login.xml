@@ -24,7 +24,7 @@
         app:layout_constraintVertical_bias="0.139" />
 
     <EditText
-        android:id="@+id/txtSenha"
+        android:id="@+id/txtSenhaLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"

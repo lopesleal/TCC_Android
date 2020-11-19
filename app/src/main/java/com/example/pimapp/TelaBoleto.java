@@ -38,6 +38,13 @@ public class TelaBoleto extends AppCompatActivity {
                 startActivity(irTelaQuitar);
             }
         });
-
+        Button btnVoltarTelBoleto = (Button) findViewById(R.id.btnVoltarTelBoleto);
+        btnVoltarTelBoleto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent irTelaAcompanhamentobtnVoltar = new Intent(TelaBoleto.this, TelaAcompanhamento.class);
+                startActivity(irTelaAcompanhamentobtnVoltar);
+            }
+        });
     }
 }
