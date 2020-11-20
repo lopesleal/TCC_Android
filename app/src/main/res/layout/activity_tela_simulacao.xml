@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Valor do Financiamento"
-        android:inputType="textPersonName"
+        android:inputType="numberDecimal"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Parcelas"
-        android:inputType="textPersonName"
+        android:inputType="numberDecimal"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -41,16 +41,16 @@
 
     <TextView
         android:id="@+id/textView31"
-        android:layout_width="304dp"
-        android:layout_height="291dp"
+        android:layout_width="317dp"
+        android:layout_height="293dp"
         android:text="Texto simulando o financiamento"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.411"
+        app:layout_constraintHorizontal_bias="0.308"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.579" />
+        app:layout_constraintVertical_bias="0.63" />
 
     <Button
         android:id="@+id/btnSimul"
@@ -84,7 +84,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Renda"
-        android:inputType="textPersonName"
+        android:inputType="numberDecimal"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
