@@ -20,6 +20,8 @@ public class TelaLogin extends AppCompatActivity {
         Button btnTelEsqueciSenha = (Button) findViewById(R.id.btnEsqSenha);
         this.editTextLogin=(EditText) findViewById(R.id.txtLogin);
         this.editTextSenhaLogin=(EditText) findViewById(R.id.txtSenhaLogin);
+        String login= editTextLogin.getText().toString();
+        String senha= editTextSenhaLogin.getText().toString();
         btnTelEsqueciSenha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -32,8 +34,14 @@ public class TelaLogin extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent irTelaUsuarioLogin = new Intent(TelaLogin.this, TelaUsuario.class);
-                startActivity(irTelaUsuarioLogin);
+                if (!login.contains("@"))
+                    editTextLogin.setError("Email inválido");
+                else if (senha.length()<6)
+                    editTextSenhaLogin.setError("Senha deve ter pelo menos 6 caracteres");
+                else {
+                    Intent irTelaUsuarioLogin = new Intent(TelaLogin.this, TelaUsuario.class);
+                    startActivity(irTelaUsuarioLogin);
+                }
             }
         });
 

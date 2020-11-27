@@ -20,11 +20,22 @@ public class TelaEsqueciSenha extends AppCompatActivity {
         this.editTextCpf=(EditText) findViewById(R.id.txtCpfEsqSenha);
         this.editTextDtn=(EditText) findViewById(R.id.txtDtnEsqSenha);
         this.editTextTelefone=(EditText) findViewById(R.id.txtTelefoneEsqSenha);
+        String cpf= editTextCpf.getText().toString();
+        String dtn= editTextDtn.getText().toString();
+        String telefone= editTextTelefone.getText().toString();
         btnTelEntrarEsqueciSenha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent irTelaUsuarioEsqueciSenha = new Intent(TelaEsqueciSenha.this, TelaUsuario.class);
-                startActivity(irTelaUsuarioEsqueciSenha);
+                if (cpf.length()<11)
+                    editTextCpf.setError("Cpf inválido");
+                else if (dtn.length()<1)
+                    editTextDtn.setError("Data de Nascimento inválido");
+                else if (telefone.length()<10)
+                    editTextTelefone.setError("Telefone inválido");
+                else {
+                    Intent irTelaUsuarioEsqueciSenha = new Intent(TelaEsqueciSenha.this, TelaUsuario.class);
+                    startActivity(irTelaUsuarioEsqueciSenha);
+                }
             }
         });
 
